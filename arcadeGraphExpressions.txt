@@ -22,7 +22,7 @@ var to2=200
 var width = (value - from1)/(to1-from1)*(to2-from2)+from2
 return Text(round(width,0)/2)
 
-/* Step 5 (Script 1) - Text Location Modification */
+/* Step 5 (Expression 1) - Text Location Modification */
 var value = $feature.LocalAvg
 var from1 = 65
 var to1 = 85
@@ -35,7 +35,7 @@ else
     return Text(round(width,0)/2)
 	
 	
-/* Step 5 (Script 2) - Text Colour */
+/* Step 5 (Expression 2) - Text Colour */
 var value = $feature.LocalAvg
 var from1 = 65
 var to1 = 85
