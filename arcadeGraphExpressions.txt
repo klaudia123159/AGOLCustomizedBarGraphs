@@ -1,0 +1,51 @@
+/* Arcade expressions created by Liam Gowan, to be used for creating bar graphs within ArcGIS Online */
+
+/* Step 2 - Value Text */ 
+return Text($feature.LocalAvg)
+
+
+/* Step 3 Width */
+var value = $feature.LocalAvg
+var from1 = 65
+var to1 = 85
+var from2=0
+var to2=200
+var width = (value - from1)/(to1-from1)*(to2-from2)+from2
+return Text(round(width,0))
+
+/* Step 4 - Text Location */
+var value = $feature.LocalAvg
+var from1 = 65
+var to1 = 85
+var from2=0
+var to2=200
+var width = (value - from1)/(to1-from1)*(to2-from2)+from2
+return Text(round(width,0)/2)
+
+/* Step 5 (Script 1) - Text Location Modification */
+var value = $feature.LocalAvg
+var from1 = 65
+var to1 = 85
+var from2=0
+var to2=200
+var width = (value - from1)/(to1-from1)*(to2-from2)+from2
+if(width<=10)
+    return Text(round(width,0)/2 + 30)
+else
+    return Text(round(width,0)/2)
+	
+	
+/* Step 5 (Script 2) - Text Colour */
+var value = $feature.LocalAvg
+var from1 = 65
+var to1 = 85
+var from2=0
+var to2=200
+var width = (value - from1)/(to1-from1)*(to2-from2)+from2
+if(width<=10)
+    return "color: white;"
+else
+    return ""
+	
+	
+	
