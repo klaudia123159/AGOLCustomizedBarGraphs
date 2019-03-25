@@ -6,7 +6,7 @@
 return Text($feature.LocalAvg)
 
 
-/* Step 4 Width */
+/* Step 4 - Width */
 var value = $feature.LocalAvg
 var from1 = 65
 var to1 = 85
